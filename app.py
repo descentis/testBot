@@ -18,7 +18,7 @@ from langchain_nomic import NomicEmbeddings
 load_dotenv()
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-os.environ["GROQ_API_KEY"] = st.secrets['OPENAI_API_KEY']
+os.environ["GROQ_API_KEY"] = st.secrets['GROQ_API_KEY']
 os.environ["NOMIC_API_KEY"] = st.secrets["NOMIC_API_KEY"]
 
 def load_document(file_path):
