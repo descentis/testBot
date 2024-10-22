@@ -34,7 +34,7 @@ def setup_vectorstore(documents):
     print("document splitting is over")
     #vectorstore = InMemoryVectorStore.from_documents(documents=splits,
     #                                                 embedding=OllamaEmbeddings(model="llama3.2:1b"))
-    vectorstore = FAISS.from_documents(documents=splits, embedding=NomicEmbeddings(model="nomic-embed-text-v1.5"))
+    vectorstore = InMemoryVectorStore.from_documents(documents=splits, embedding=NomicEmbeddings(model="nomic-embed-text-v1.5"))
     #vectorstore = FAISS.from_documents(documents=splits, embedding=OllamaEmbeddings(model="llama3.2:1b"))
     print("embeddings created")
     return vectorstore
